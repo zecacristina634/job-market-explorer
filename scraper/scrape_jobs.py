@@ -5,7 +5,7 @@ from playwright.sync_api import sync_playwright
 
 URLS = [
     "https://remoteok.com/remote-dev-jobs",
-    "https://remoteok.com/remote-ai-jobs",
+    "https://remoteok.com/remote-machine-learning-jobs",
     ]
 
 def scrape_jobs():

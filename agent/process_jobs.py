@@ -107,15 +107,53 @@ def classify_job(state: JobState) -> JobState:
 
     return {"jobs": classified_jobs}
 
-def report_uncategorized(state: JobState) -> JobState:
-    """Nod 3: raportarea joburilor clasificate ca 'Other'"""
-    other_count = sum(1 for job in state["jobs"] if job.get("category")=="Other")
+def recheck_other(state: JobState) -> JobState:
+    """Nod 3: verificarea joburilor 'Other' folosind descrierea completa"""
+    rechecked_jobs =[]
+    changed_count=0
 
-    print(f"Info: {other_count} joburi clasificate 'Other'.")
-    return state
+    for job in state["jobs"]:
+        if job.get("category") != "Other":
+            rechecked_jobs.append(job)
+            continue
+
+        description = job.get("description", "")[:1000]
+        title = job.get("title", "")
+
+        prompt =f"""Esti un clasificator de joburi tech. Analizeaza cu atentie titlul si descrierea de mai jos.
+        Alege EXACT o categorie din aceasta lista, fara alte explicatii:
+        {",".join(CATEGORII)}
+
+        Titlul jobului: {title}
+        Descriere: {description}
+        
+        Daca jobul NU are nicio legatura cu tehnologia/IT, raspunde cu 'Other'.
+        Raspunde doar cu numele categoriei, exact cum apare in lista."""
+
+        response = llm.invoke(prompt)
+        new_category = response.content.strip()
+
+        if new_category not in CATEGORII:
+            new_category = "Other"
+
+        new_job = job.copy()
+        if new_category !="Other":
+            changed_count += 1;
+        new_job["category"] = new_category
+        rechecked_jobs.append(new_job)
+
+    print(f"Recheck: {changed_count} joburi reclasificate pe baza descrierii.")
+    return {"jobs": rechecked_jobs}
+
+def report_uncategorized(state: JobState) -> JobState:
+    """Nod 4: eliminarea joburilor clasificate ca 'Other' dupa verificare"""
+    kept_jobs = [job for job in state["jobs"] if job.get("category")!="Other"]
+    removed_count = len(state["jobs"]) -len(kept_jobs)
+    print(f"Filtrare: {removed_count} joburi non-tech eliminate.")
+    return {"jobs": kept_jobs}
 
 def validate(state: JobState) -> JobState:
-    """Nod 4: verificarea fiecarui job pentru date esentiale lipsa"""
+    """Nod 5: verificarea fiecarui job pentru date esentiale lipsa"""
     validated_jobs = []
     incomplete_count =0
 
@@ -147,13 +185,15 @@ def build_graph():
     graph.add_node("filter_tech_jobs", filter_tech_jobs)
     graph.add_node("clean_tags", clean_tags)
     graph.add_node("classify_job", classify_job)
+    graph.add_node("recheck_other", recheck_other)
     graph.add_node("report_uncategorized", report_uncategorized)
     graph.add_node("validate", validate)
 
     graph.set_entry_point("filter_tech_jobs")
     graph.add_edge("filter_tech_jobs", "clean_tags")
     graph.add_edge("clean_tags", "classify_job")
-    graph.add_edge("classify_job", "report_uncategorized")
+    graph.add_edge("classify_job", "recheck_other")
+    graph.add_edge("recheck_other", "report_uncategorized")
     graph.add_edge("report_uncategorized", "validate")
     graph.add_edge("validate", END)
 
