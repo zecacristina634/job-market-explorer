@@ -37,13 +37,17 @@ NON_TECH_KEYWORDS = [
     "valuer", "payroll", "loss prevention", "customer support driver",
 ]
 
+SEEN_JOBS_PATH = "data/processed/seen_jobs.json"
+
 llm = ChatOpenAI(model="gpt-5-mini", temperature=0)
 
 class JobState(TypedDict):
     jobs: List[dict]
+    already_processed: List[dict]
+    rejected_jobs: List[dict]
 
 def filter_tech_jobs(state: JobState) -> JobState:
-    """Nod 0: eliminarea joburilor care nu sunt din domeniul tech"""
+    """Nod - eliminarea joburilor care nu sunt din domeniul tech"""
     filtered_jobs =[]
     removed_count =0
 
@@ -65,7 +69,7 @@ def filter_tech_jobs(state: JobState) -> JobState:
     return {"jobs": filtered_jobs}
 
 def clean_tags(state: JobState) -> JobState:
-    """Nod 1: normalizarea tag-urilor fiecarui job."""
+    """Nod - normalizarea tag-urilor fiecarui job"""
     cleaned_jobs =[]
 
     for job in state["jobs"]:
@@ -80,7 +84,7 @@ def clean_tags(state: JobState) -> JobState:
     return {"jobs": cleaned_jobs}
 
 def classify_job(state: JobState) -> JobState:
-    """Nod 2: clasificarea fiecarui job cu gpt"""
+    """Nod - clasificarea fiecarui job cu gpt"""
     classified_jobs =[]
 
     for job in state["jobs"]:
@@ -108,7 +112,7 @@ def classify_job(state: JobState) -> JobState:
     return {"jobs": classified_jobs}
 
 def recheck_other(state: JobState) -> JobState:
-    """Nod 3: verificarea joburilor 'Other' folosind descrierea completa"""
+    """Nod - verificarea joburilor 'Other' folosind descrierea completa"""
     rechecked_jobs =[]
     changed_count=0
 
@@ -146,14 +150,17 @@ def recheck_other(state: JobState) -> JobState:
     return {"jobs": rechecked_jobs}
 
 def report_uncategorized(state: JobState) -> JobState:
-    """Nod 4: eliminarea joburilor clasificate ca 'Other' dupa verificare"""
+    """Nod - eliminarea joburilor clasificate ca 'Other' dupa verificare"""
     kept_jobs = [job for job in state["jobs"] if job.get("category")!="Other"]
-    removed_count = len(state["jobs"]) -len(kept_jobs)
-    print(f"Filtrare: {removed_count} joburi non-tech eliminate.")
-    return {"jobs": kept_jobs}
+    rejected= [job for job in state["jobs"] if job.get("category")=="Other"]
+
+    print(f"Filtrare: {len(rejected)} joburi non-tech eliminate.")
+
+    existing_rejected = state.get("rejected_jobs", [])
+    return {"jobs": kept_jobs, "rejected_jobs": existing_rejected + rejected}
 
 def extract_skills(state:JobState) ->JobState:
-    """Nod 5: extragerea skill-urilor tehnice reale din descrierea jobului"""
+    """Nod - extragerea skill-urilor tehnice reale din descrierea jobului"""
     updated_jobs = []
 
     for job in state["jobs"]:
@@ -186,8 +193,36 @@ def extract_skills(state:JobState) ->JobState:
 
     return {"jobs": updated_jobs} 
 
+def split_new_vs_seen(state: JobState) -> JobState:
+    """Nod - separarea joburilor curente cu cele procesate anterior"""
+    import os
+
+    if os.path.exists(SEEN_JOBS_PATH):
+        with open(SEEN_JOBS_PATH, "r", encoding="utf-8") as f:
+            seen_data = json.load(f)
+    else:
+        seen_data = {}
+
+    new_jobs= []
+    already_processed = []
+
+    for job in state["jobs"]:
+        link = job.get("link", "")
+        if link in seen_data:
+            old_job = seen_data[link].copy()
+            old_job["is_new"] =False
+            already_processed.append(old_job)
+        else:
+            job_copy = job.copy()
+            job_copy["is_new"] = True
+            new_jobs.append(job_copy)
+
+    print(f"Din {len(state['jobs'])} joburi: {len(new_jobs)} noi, {len(already_processed)} procesate anterior.")
+
+    return {"jobs": new_jobs, "already_processed": already_processed}
+
 def validate(state: JobState) -> JobState:
-    """Nod 6: verificarea fiecarui job pentru date esentiale lipsa"""
+    """Nod - verificarea fiecarui job pentru date esentiale lipsa"""
     validated_jobs = []
     incomplete_count =0
 
@@ -207,31 +242,51 @@ def validate(state: JobState) -> JobState:
     print(f"Validare: {incomplete_count} joburi cu campuri lipsa.")
     return {"jobs": validated_jobs}
 
+def finalize(state: JobState) ->JobState:
+    """Nod final: combinarea joburilor noi cu cele deja procesate"""
+    already_processed = state.get("already_processed", [])
+
+    already_kept = [job for job in already_processed if job.get("category") != "Other"]
+
+    all_kept = state["jobs"] + already_kept
+    all_seen = state["jobs"] + already_processed + state.get("rejected_jobs", [])
+
+    seen_data = {job["link"]: job for job in all_seen if job.get("link")}
+    with open(SEEN_JOBS_PATH, "w", encoding="utf-8") as f:
+        json.dump(seen_data, f, ensure_ascii=False, indent=2)
+
+    return {"jobs": all_kept}
+
 def save_processed(jobs: list, path="data/processed/jobs_clean.json"):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(jobs, f, ensure_ascii=False, indent=2)
     print(f"Au fost salvate {len(jobs)} joburi procesate.")
 
+
 def build_graph():
     """Conectarea nodurilor intr-un LangGraph"""
     graph = StateGraph(JobState)
 
-    graph.add_node("filter_tech_jobs", filter_tech_jobs)
+    graph.add_node("filter_tech_jobs", filter_tech_jobs)    
+    graph.add_node("split_new_vs_seen", split_new_vs_seen)
     graph.add_node("clean_tags", clean_tags)
     graph.add_node("classify_job", classify_job)
     graph.add_node("recheck_other", recheck_other)
     graph.add_node("report_uncategorized", report_uncategorized)
     graph.add_node("extract_skills", extract_skills)
     graph.add_node("validate", validate)
+    graph.add_node("finalize", finalize)
 
     graph.set_entry_point("filter_tech_jobs")
-    graph.add_edge("filter_tech_jobs", "clean_tags")
+    graph.add_edge("filter_tech_jobs", "split_new_vs_seen")
+    graph.add_edge("split_new_vs_seen", "clean_tags")
     graph.add_edge("clean_tags", "classify_job")
     graph.add_edge("classify_job", "recheck_other")
     graph.add_edge("recheck_other", "report_uncategorized")
     graph.add_edge("report_uncategorized", "extract_skills")
     graph.add_edge("extract_skills", "validate")
-    graph.add_edge("validate", END)
+    graph.add_edge("validate", "finalize")
+    graph.add_edge("finalize", END)
 
     return graph.compile()
 
