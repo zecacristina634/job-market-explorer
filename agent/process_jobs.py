@@ -152,8 +152,42 @@ def report_uncategorized(state: JobState) -> JobState:
     print(f"Filtrare: {removed_count} joburi non-tech eliminate.")
     return {"jobs": kept_jobs}
 
+def extract_skills(state:JobState) ->JobState:
+    """Nod 5: extragerea skill-urilor tehnice reale din descrierea jobului"""
+    updated_jobs = []
+
+    for job in state["jobs"]:
+        description = job.get("description", "")[:1500]
+        title = job.get("title", "")
+
+        prompt =f"""Esti un expert in recrutare tech. Extrage din textul de mai jos DOAR skill-urile tehnice reale 
+        (limbaje de programare, framework-uri, unelte, platforme cloud, baze de date etc.) mentionate explicit.
+        
+        Titlul jobului: {title}
+        Descriere: {description}
+                
+        Raspunde STRICT cu o lista de skill-uri separate prin virgula, fara alte cuvinte, fara explicatii.
+        Exemplu de raspuns: Python, SQL, AWS, Docker, React
+        Daca nu gasesti niciun skill tehnic clar mentionat, raspunde cu: N/A"""
+
+        response = llm.invoke(prompt)
+        raw_skills = response.content.strip()
+
+        if raw_skills == "N/A" or not raw_skills:
+            extracted_skills =[]
+        else:
+            extracted_skills = [s.strip() for s in raw_skills.split(",") if s.split()]
+
+        new_job = job.copy()
+        new_job["extracted_skills"] = extracted_skills
+        updated_jobs.append(new_job)
+
+        print(f"    {title[:40]:40} -> {', '.join(extracted_skills) if extracted_skills else '(niciun skill gasit)'}")
+
+    return {"jobs": updated_jobs} 
+
 def validate(state: JobState) -> JobState:
-    """Nod 5: verificarea fiecarui job pentru date esentiale lipsa"""
+    """Nod 6: verificarea fiecarui job pentru date esentiale lipsa"""
     validated_jobs = []
     incomplete_count =0
 
@@ -187,6 +221,7 @@ def build_graph():
     graph.add_node("classify_job", classify_job)
     graph.add_node("recheck_other", recheck_other)
     graph.add_node("report_uncategorized", report_uncategorized)
+    graph.add_node("extract_skills", extract_skills)
     graph.add_node("validate", validate)
 
     graph.set_entry_point("filter_tech_jobs")
@@ -194,7 +229,8 @@ def build_graph():
     graph.add_edge("clean_tags", "classify_job")
     graph.add_edge("classify_job", "recheck_other")
     graph.add_edge("recheck_other", "report_uncategorized")
-    graph.add_edge("report_uncategorized", "validate")
+    graph.add_edge("report_uncategorized", "extract_skills")
+    graph.add_edge("extract_skills", "validate")
     graph.add_edge("validate", END)
 
     return graph.compile()
