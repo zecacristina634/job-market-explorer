@@ -3,6 +3,18 @@ import csv
 from datetime import datetime
 from playwright.sync_api import sync_playwright
 
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler("scraper/pipeline.log", encoding="utf-8"),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
+
 URLS = [
     "https://remoteok.com/remote-dev-jobs",
     "https://remoteok.com/remote-machine-learning-jobs",
@@ -17,18 +29,18 @@ def scrape_jobs():
         page = browser.new_page()
 
         for url in URLS:
-            print(f"\nScraping: {url}")
+            logger.info(f"\nScraping: {url}")
             try:
                 page.goto(url)
                 page.wait_for_selector("table#jobsboard", timeout=15000)
                 page.wait_for_load_state("networkidle", timeout=15000)
                 page.wait_for_timeout(2000)
             except Exception as e:
-                print(f"Eroare la incarcarea paginii {url}: {e}")
+                logger.error(f"Eroare la incarcarea paginii {url}: {e}")
                 continue
 
             rows = page.query_selector_all("tr.job")
-            print(f"Am gasit {len(rows)} joburi pe aceasta pagina.")
+            logger.info(f"Am gasit {len(rows)} joburi pe aceasta pagina.")
 
             for row in rows:
                 try:
@@ -79,19 +91,19 @@ def scrape_jobs():
                     })
 
                 except Exception as e:
-                    print(f"Eroare la un job: {e}")
+                    logger.error(f"Eroare la un job: {e}")
                     continue
 
         browser.close()
 
-    print(f"\nTotal joburi unice extrase: {len(jobs)}")
+    logger.info(f"\nTotal joburi unice extrase: {len(jobs)}")
     return jobs
 
 
 def save_to_json(jobs, path="data/raw/jobs.json"):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(jobs, f, ensure_ascii=False, indent=2)
-    print(f"Salvat {len(jobs)} joburi in {path}")
+    logger.info(f"Salvat {len(jobs)} joburi in {path}")
 
 
 def save_to_csv(jobs, path="data/raw/jobs.csv"):
@@ -101,7 +113,7 @@ def save_to_csv(jobs, path="data/raw/jobs.csv"):
         writer = csv.DictWriter(f, fieldnames=jobs[0].keys())
         writer.writeheader()
         writer.writerows(jobs)
-    print(f"Salvat {len(jobs)} joburi in {path}")
+    logger.info(f"Salvat {len(jobs)} joburi in {path}")
 
 if __name__ == "__main__":
     jobs_data=scrape_jobs()

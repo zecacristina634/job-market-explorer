@@ -5,6 +5,18 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langgraph.graph import StateGraph, END
 
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler("agent/pipeline.log", encoding="utf-8"),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
+
 load_dotenv()
 
 CATEGORII =[
@@ -65,7 +77,7 @@ def filter_tech_jobs(state: JobState) -> JobState:
 
         filtered_jobs.append(job)
 
-    print(f"Filtrare: {removed_count} joburi non-tech eliminate, {len(filtered_jobs)} ramase")
+    logger.info(f"Filtrare: {removed_count} joburi non-tech eliminate, {len(filtered_jobs)} ramase")
     return {"jobs": filtered_jobs}
 
 def clean_tags(state: JobState) -> JobState:
@@ -107,7 +119,7 @@ def classify_job(state: JobState) -> JobState:
         new_job["category"] = category
         classified_jobs.append(new_job)
 
-        print(f"  {title[:40]:40} -> {category}")
+        logger.info(f"  {title[:40]:40} -> {category}")
 
     return {"jobs": classified_jobs}
 
@@ -146,7 +158,7 @@ def recheck_other(state: JobState) -> JobState:
         new_job["category"] = new_category
         rechecked_jobs.append(new_job)
 
-    print(f"Recheck: {changed_count} joburi reclasificate pe baza descrierii.")
+    logger.info(f"Recheck: {changed_count} joburi reclasificate pe baza descrierii.")
     return {"jobs": rechecked_jobs}
 
 def report_uncategorized(state: JobState) -> JobState:
@@ -154,7 +166,7 @@ def report_uncategorized(state: JobState) -> JobState:
     kept_jobs = [job for job in state["jobs"] if job.get("category")!="Other"]
     rejected= [job for job in state["jobs"] if job.get("category")=="Other"]
 
-    print(f"Filtrare: {len(rejected)} joburi non-tech eliminate.")
+    logger.info(f"Filtrare: {len(rejected)} joburi non-tech eliminate.")
 
     existing_rejected = state.get("rejected_jobs", [])
     return {"jobs": kept_jobs, "rejected_jobs": existing_rejected + rejected}
@@ -189,7 +201,7 @@ def extract_skills(state:JobState) ->JobState:
         new_job["extracted_skills"] = extracted_skills
         updated_jobs.append(new_job)
 
-        print(f"    {title[:40]:40} -> {', '.join(extracted_skills) if extracted_skills else '(niciun skill gasit)'}")
+        logger.info(f"    {title[:40]:40} -> {', '.join(extracted_skills) if extracted_skills else '(niciun skill gasit)'}")
 
     return {"jobs": updated_jobs} 
 
@@ -217,7 +229,7 @@ def split_new_vs_seen(state: JobState) -> JobState:
             job_copy["is_new"] = True
             new_jobs.append(job_copy)
 
-    print(f"Din {len(state['jobs'])} joburi: {len(new_jobs)} noi, {len(already_processed)} procesate anterior.")
+    logger.info(f"Din {len(state['jobs'])} joburi: {len(new_jobs)} noi, {len(already_processed)} procesate anterior.")
 
     return {"jobs": new_jobs, "already_processed": already_processed}
 
@@ -239,7 +251,7 @@ def validate(state: JobState) -> JobState:
 
         validated_jobs.append(new_job)
 
-    print(f"Validare: {incomplete_count} joburi cu campuri lipsa.")
+    logger.info(f"Validare: {incomplete_count} joburi cu campuri lipsa.")
     return {"jobs": validated_jobs}
 
 def finalize(state: JobState) ->JobState:
@@ -260,7 +272,7 @@ def finalize(state: JobState) ->JobState:
 def save_processed(jobs: list, path="data/processed/jobs_clean.json"):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(jobs, f, ensure_ascii=False, indent=2)
-    print(f"Au fost salvate {len(jobs)} joburi procesate.")
+    logger.info(f"Au fost salvate {len(jobs)} joburi procesate.")
 
 
 def build_graph():

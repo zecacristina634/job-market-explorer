@@ -224,3 +224,7 @@ data/processed/*
 !data/processed/.gitkeep
 !data/processed/jobs_clean.json
 !data/processed/seen_jobs.json
+
+#Logs
+agent/pipeline.log
+scraper/pipeline.log
