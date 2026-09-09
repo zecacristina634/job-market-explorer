@@ -222,3 +222,5 @@ data/raw/*
 data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
+!data/processed/jobs_clean.json
+!data/processed/seen_jobs.json
