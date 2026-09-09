@@ -1,5 +1,8 @@
 name: Daily Job Scraping
 
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: '0 9 * * *'
