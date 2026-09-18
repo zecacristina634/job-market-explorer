@@ -51,7 +51,7 @@ NON_TECH_KEYWORDS = [
 
 SEEN_JOBS_PATH = "data/processed/seen_jobs.json"
 
-llm = ChatOpenAI(model="gpt-5-mini", temperature=0)
+llm = ChatOpenAI(model="gpt-5-mini", temperature=0, max_retries=3, timeout=30)
 
 class JobState(TypedDict):
     jobs: List[dict]
