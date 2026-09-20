@@ -1,5 +1,83 @@
 [
   {
+    "title": "Senior .NET Software Engineer",
+    "company": "OkWhen",
+    "location": "🌏 Probably worldwide",
+    "tags": [
+      "design",
+      "c sharp",
+      "saas",
+      "sys admin",
+      "infosec",
+      "edu",
+      "technical",
+      "testing",
+      "web developer",
+      "xamarin",
+      "c",
+      "cloud",
+      "git",
+      "typescript",
+      "angular",
+      "mobile",
+      "executive",
+      "content writing",
+      "senior",
+      "ops",
+      "medical",
+      "engineer",
+      "backend"
+    ],
+    "salary": "80000-150000 USD",
+    "date_posted": "2026-09-20T00:00:31+00:00",
+    "link": "https://remoteok.com/remote-jobs/remote-senior-net-software-engineer-okwhen-1137411",
+    "description": "\nPlease note. Directly emailing us will result in immediate disqualification. Use the application form to apply.\n\nAbout OkWhen\nOkWhen builds technology that powers live, virtual, and hybrid events. Our platform supports conference management, registration, payments, mobile apps, content libraries, webinars, LMS functionality, CEU tracking, sponsor management, and operational workflows.\nWe are hiring a Senior .NET Software Engineer to help us improve, maintain, and extend a production platform used to run complex events.\nThe Outcome We’re Hiring For\nYou will own meaningful parts of our application and consistently deliver reliable software without requiring constant supervision. You will improve system performance, reduce technical debt, and turn operational problems into simple, maintainable products.\nThis is not a ticket-taking role. We need an engineer who can understand the existing system, make sound technical decisions, and follow work through from discovery to productio\n Apply now and work remotely at OkWhen",
+    "is_new": true,
+    "category": "Backend",
+    "extracted_skills": [
+      ".NET"
+    ],
+    "complete": true
+  },
+  {
+    "title": "Backend Software Engineer",
+    "company": "Airspace Link",
+    "location": "🌏 Probably worldwide",
+    "tags": [
+      "golang",
+      "engineer",
+      "backend"
+    ],
+    "salary": "80000-150000 USD",
+    "date_posted": "2026-09-19T20:00:01+00:00",
+    "link": "https://remoteok.com/remote-jobs/remote-backend-software-engineer-airspace-link-1137409",
+    "description": "Remote - Throughout history, transformative advancements in infrastructure have propelled humanity forward—from Vanderbilt’s railroads to Edison’s electrical grid and Eisenhower’s highways. Today, we stand at another pivotal infrastructure moment with Airspace Link’s d...\n Apply now and work remotely at Airspace Link",
+    "is_new": true,
+    "category": "Backend",
+    "extracted_skills": [],
+    "complete": true
+  },
+  {
+    "title": "Software Engineer C",
+    "company": "Octo Horizon",
+    "location": "🌏 Worldwide",
+    "tags": [
+      "engineer",
+      "technical",
+      "cloud"
+    ],
+    "salary": "120000-180000 USD",
+    "date_posted": "2026-08-20T00:00:03+00:00",
+    "link": "https://remoteok.com/remote-jobs/remote-software-engineer-c-octo-horizon-1128583",
+    "description": "<h2>Applications are now closed for this role, but we’re always looking for great talent. Check our careers page for similar openings<strong><br /><br />About OctoHorizon</strong></h2><p>OctoHorizon is an independent high-frequency trading (HFT) firm focused on developing advanced algorithmic strategies for digital asset markets. Our approach combines rigorous quantitative research with low-latency engineering to identify and capture short-lived market inefficiencies.</p><p>We are a globally distributed, fully remote team built on principles of autonomy, technical excellence, and continuous iteration. Engineers at OctoHorizon work at the intersection of performance, infrastructure, and algorithmic trading — with direct and measurable impact on production systems and trading results.</p><hr /><h3 class=\"western\"><strong>Role Overview</strong></h3><p>We are seeking an exceptional <strong>C++ Software Engineer</strong> to design and implement high-performance systems that underpin our\n Apply now and work remotely at Octo Horizon",
+    "is_new": false,
+    "category": "DevOps / Infrastructure",
+    "extracted_skills": [
+      "C++"
+    ],
+    "complete": true
+  },
+  {
     "title": "Software Deployment Engineer",
     "company": "KPI Solutions",
     "location": "🇺🇸 United States",
@@ -26,7 +104,7 @@
     "date_posted": "2026-09-19T08:00:34+00:00",
     "link": "https://remoteok.com/remote-jobs/remote-software-deployment-engineer-kpi-solutions-1137408",
     "description": "About KPI Solutions\nKPI Solutions is a national supply chain consulting and warehouse automation systems integrator, helping some of the biggest names in e-commerce, retail, and distribution move product faster and smarter. Formed in 2021 through the combination of Kuecker Logistics Group, PULSE Integration, and QC Software, KPI brings together decades of material handling and systems integration experience — rooted in material handling integration dating back to 1971. From initial design through go-live and ongoing support, KPI delivers engineered solutions that blend automated technologies (MHE, robotics, conveyor, ASRS, AMR/AGV) with intelligent warehouse execution software to optimize productivity, increase fulfillment speed, and build operational resilience for clients.\nPosition Summary \nThe Software Deployment Engineer I/II is an individual-contributor role responsible for the end-to-end delivery, configuration, installation, and support of Kommand warehouse execution/contr\n Apply now and work remotely at KPI Solutions",
-    "is_new": true,
+    "is_new": false,
     "category": "DevOps / Infrastructure",
     "extracted_skills": [
       "MHE",
@@ -64,7 +142,7 @@
     "date_posted": "2026-09-19T00:00:16+00:00",
     "link": "https://remoteok.com/remote-jobs/remote-vp-pricing-packaging-delinea-1137407",
     "description": "About Delinea:\nDelinea is a pioneer in securing human and machine identities through intelligent, centralized authorization, empowering organizations to seamlessly govern their interactions across the modern enterprise. Leveraging AI-powered intelligence, Delinea’s leading cloud-native Identity Security Platform applies context throughout the entire identity lifecycle – across cloud and traditional infrastructure, data, SaaS applications, and AI. It is the only platform that enables you to discover all identities – including workforce, IT administrator, developers, and machines – assign appropriate access levels, detect irregularities, and respond to threats in real-time. With deployment in weeks, not months, 90% fewer resources to manage than the nearest competitor, and a 99.995% uptime, Delinea delivers robust security and operational efficiency without compromise. Learn more about Delinea on Delinea.com, LinkedIn, X, and YouTube.Join our passionate, global team at Delinea a\n Apply now and work remotely at Delinea",
-    "is_new": true,
+    "is_new": false,
     "category": "Product / Project Management",
     "extracted_skills": [],
     "complete": true
@@ -83,30 +161,10 @@
     "date_posted": "2026-09-18T13:29:53+00:00",
     "link": "https://remoteok.com/remote-jobs/remote-senior-shopify-developer-sanctuary-computer-1137405",
     "description": "<p>We are hiring a <strong>contract-based Senior Shopify Developer</strong> to contribute to our Design and Development Team.</p><p><a href=\"https://garden3d.notion.site/Senior-Shopify-Developer-3dd131fea2c78051b514d89208aa0001?source=copy_link\"><strong>Original Job posting link here</strong></a></p><h3>🌎<strong>About garden3d</strong></h3><p>We are worker owned creative collective, innovating on everything from brands and IRL communities to IoT devices and cross platform apps. We share profit, open source everything, spin out new businesses, and invest in exciting ideas through financial and/or in-kind contributions.</p><p>Our client roster includes Google, Stripe, Figma, Hinge, Black Socialists in America, ACLU, Pratt, Parsons, Mozilla, The Nobel Prize, MIT, Gnosis, Etsy &amp; Gagosian.</p><p>We’re the software team behind innovative products like The Light Phone &amp; Mill, and we operate a global, decentralized community space collective called Index Space.</p><p>We think of\n Apply now and work remotely at Sanctuary Computer",
-    "is_new": true,
+    "is_new": false,
     "category": "Frontend",
     "extracted_skills": [
       "Shopify"
-    ],
-    "complete": true
-  },
-  {
-    "title": "Software Engineer C",
-    "company": "Octo Horizon",
-    "location": "🌏 Worldwide",
-    "tags": [
-      "engineer",
-      "technical",
-      "cloud"
-    ],
-    "salary": "120000-180000 USD",
-    "date_posted": "2026-08-20T00:00:03+00:00",
-    "link": "https://remoteok.com/remote-jobs/remote-software-engineer-c-octo-horizon-1128583",
-    "description": "<h2>Applications are now closed for this role, but we’re always looking for great talent. Check our careers page for similar openings<strong><br /><br />About OctoHorizon</strong></h2><p>OctoHorizon is an independent high-frequency trading (HFT) firm focused on developing advanced algorithmic strategies for digital asset markets. Our approach combines rigorous quantitative research with low-latency engineering to identify and capture short-lived market inefficiencies.</p><p>We are a globally distributed, fully remote team built on principles of autonomy, technical excellence, and continuous iteration. Engineers at OctoHorizon work at the intersection of performance, infrastructure, and algorithmic trading — with direct and measurable impact on production systems and trading results.</p><hr /><h3 class=\"western\"><strong>Role Overview</strong></h3><p>We are seeking an exceptional <strong>C++ Software Engineer</strong> to design and implement high-performance systems that underpin our\n Apply now and work remotely at Octo Horizon",
-    "is_new": false,
-    "category": "DevOps / Infrastructure",
-    "extracted_skills": [
-      "C++"
     ],
     "complete": true
   },
@@ -1169,50 +1227,6 @@
     "extracted_skills": [
       "Golang"
     ],
-    "complete": true
-  },
-  {
-    "title": "Graphic Designer",
-    "company": "Miranda Creative, Inc.",
-    "location": "🇬🇧 United Kingdom",
-    "tags": [
-      "design",
-      "music",
-      "technical",
-      "travel",
-      "speech",
-      "video",
-      "executive",
-      "content writing",
-      "medical",
-      "engineer",
-      "sys admin",
-      "consulting",
-      "testing",
-      "virtual assistant",
-      "finance",
-      "senior",
-      "ops",
-      "customer support",
-      "microsoft",
-      "excel",
-      "legal",
-      "designer",
-      "web developer",
-      "cloud",
-      "marketing",
-      "photoshop",
-      "illustrator",
-      "full time",
-      "part time"
-    ],
-    "salary": "80000-150000 USD",
-    "date_posted": "2026-07-29T01:36:08+00:00",
-    "link": "https://remoteok.com/remote-jobs/remote-graphic-designer-miranda-creative-inc-1135610",
-    "description": "We are looking for a talented and detail-oriented Graphic Designer to join our creative team part-time (25 hours per week), with the potential to grow into a full-time opportunity.<br><br>Since 1988, Miranda Creative has partnered with more than 6,000 clients across finance, hospitality, healthcare, manufacturing, tourism, and government. We're a full-service, award-winning, New England-based creative and strategic agency. We pride ourselves on being a highly inclusive, collaborative community built on creativity, trust, and joy. We welcome you to Miranda Creative and look forward to learning more about you.<br><br>This role is ideal for a designer who enjoys bringing brands to life through thoughtful design, understands the importance of consistency, and has experience creating both static and motion-based content. The primary focus of this position will be supporting production needs, ensuring brand standards are implemented accurately, and helping deliver high-quality creative work \n Apply now and work remotely at Miranda Creative, Inc.",
-    "is_new": false,
-    "category": "Design",
-    "extracted_skills": [],
     "complete": true
   },
   {
