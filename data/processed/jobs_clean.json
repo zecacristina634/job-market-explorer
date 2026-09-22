@@ -1,5 +1,24 @@
 [
   {
+    "title": "Software Developer Security Analytics",
+    "company": "RedMimicry",
+    "location": "🌏 Probably worldwide",
+    "tags": [
+      "golang",
+      "infosec",
+      "stats",
+      "full time"
+    ],
+    "salary": "80000-150000 USD",
+    "date_posted": "2026-09-22T09:00:01+00:00",
+    "link": "https://remoteok.com/remote-jobs/remote-software-developer-security-analytics-redmimicry-1137417",
+    "description": "Remote - Location: Mostly remote (within Germany), with monthly in-person collaboration at our Berlin officeHours: Full-time, 40 hours per weekContract: Fixed-termSalary: EUR 69,000 – 77,000We are building a new capability that turns fragmented, noisy security logs...\n Apply now and work remotely at RedMimicry",
+    "is_new": true,
+    "category": "Data / AI",
+    "extracted_skills": [],
+    "complete": true
+  },
+  {
     "title": "Senior .NET Software Engineer",
     "company": "OkWhen",
     "location": "🌏 Probably worldwide",
@@ -277,33 +296,6 @@
       "Go",
       "REST"
     ],
-    "complete": true
-  },
-  {
-    "title": "Senior Governance Risk and Compliance Analyst",
-    "company": "RainFocus",
-    "location": "Orem, UT",
-    "tags": [
-      "analyst",
-      "design",
-      "saas",
-      "infosec",
-      "edu",
-      "technical",
-      "cloud",
-      "executive",
-      "senior",
-      "ops",
-      "marketing",
-      "engineer"
-    ],
-    "salary": "80000-150000 USD",
-    "date_posted": "2026-08-22T00:00:05+00:00",
-    "link": "https://remoteok.com/remote-jobs/remote-senior-governance-risk-and-compliance-analyst-rainfocus-1137061",
-    "description": "\nRainFocus, one of the most innovative software companies, is in search of an exceptional Senior Governance, Risk, and Compliance (GRC) Analyst.&nbsp;\n\n&nbsp;\n\nAbout RainFocus\n\n&nbsp;\n\nRainFocus cares about its employees, customers, and the world in which we live. Our rapidly growing team serves Fortune 500 companies like Adobe, Cisco, IBM, Oracle, VMware, and others to prepare and execute in-person, virtual, and hybrid events across the world. Those events are delivered through our industry-disrupting software platform, with groundbreaking business intelligence, to elevate the attendee experience, streamline event operations, and accelerate marketing results. We are well-funded, growing fast, and building a company that is changing the market — it will be challenging, fun, and exciting.\n\n\n\nAbout the Role\n\nWe are seeking a highly skilled and motivated Senior GRC Analyst to join our Security and Privacy team. In this role, you will own and grow RainFocus's governance, r\n Apply now and work remotely at RainFocus",
-    "is_new": false,
-    "category": "DevOps / Infrastructure",
-    "extracted_skills": [],
     "complete": true
   },
   {
