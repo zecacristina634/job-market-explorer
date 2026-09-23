@@ -13,10 +13,31 @@
     "date_posted": "2026-09-22T09:00:01+00:00",
     "link": "https://remoteok.com/remote-jobs/remote-software-developer-security-analytics-redmimicry-1137417",
     "description": "Remote - Location: Mostly remote (within Germany), with monthly in-person collaboration at our Berlin officeHours: Full-time, 40 hours per weekContract: Fixed-termSalary: EUR 69,000 – 77,000We are building a new capability that turns fragmented, noisy security logs...\n Apply now and work remotely at RedMimicry",
-    "is_new": true,
+    "is_new": false,
     "category": "Data / AI",
     "extracted_skills": [],
     "complete": true
+  },
+  "https://remoteok.com/remote-jobs/remote-people-operations-coordinator-ashby-1137412": {
+    "title": "People Operations Coordinator",
+    "company": "Ashby",
+    "location": "🌏 Worldwide",
+    "tags": [
+      "saas",
+      "recruiter",
+      "coordinator",
+      "customer support",
+      "executive",
+      "edu",
+      "ops",
+      "medical"
+    ],
+    "salary": "55000-80000 USD",
+    "date_posted": "2026-09-21T16:00:11+00:00",
+    "link": "https://remoteok.com/remote-jobs/remote-people-operations-coordinator-ashby-1137412",
+    "description": "Hi! I’m Hannah and I lead People Operations here at Ashby. I joined over four years ago as the first People hire and I’m excited that our People Ops team is growing! The People Operations team supports Ashby employees through the development and implementation of programs, policies, and services that contribute to a productive and inclusive working environment. We ensure the work we do aligns with our Operating Principles and strengthens the environment we’re building at Ashby. Our approach is to do things differently, we prioritize what truly fits our team and enhances how we work together. By embracing creativity and customization, we aim to create a people-first culture that drives both individual and organizational success. We’re building a team focused on helping Ashby scale thoughtfully while continuing to raise the bar for how we support and invest in our employees.We review all applications, and there isn’t a benefit to applying quickly. Take your time, look at the ap\n Apply now and work remotely at Ashby",
+    "is_new": false,
+    "category": "Other"
   },
   "https://remoteok.com/remote-jobs/remote-senior-net-software-engineer-okwhen-1137411": {
     "title": "Senior .NET Software Engineer",
@@ -2262,26 +2283,5 @@
     "category": "Data / AI",
     "extracted_skills": [],
     "complete": true
-  },
-  "https://remoteok.com/remote-jobs/remote-people-operations-coordinator-ashby-1137412": {
-    "title": "People Operations Coordinator",
-    "company": "Ashby",
-    "location": "🌏 Worldwide",
-    "tags": [
-      "saas",
-      "recruiter",
-      "coordinator",
-      "customer support",
-      "executive",
-      "edu",
-      "ops",
-      "medical"
-    ],
-    "salary": "55000-80000 USD",
-    "date_posted": "2026-09-21T16:00:11+00:00",
-    "link": "https://remoteok.com/remote-jobs/remote-people-operations-coordinator-ashby-1137412",
-    "description": "Hi! I’m Hannah and I lead People Operations here at Ashby. I joined over four years ago as the first People hire and I’m excited that our People Ops team is growing! The People Operations team supports Ashby employees through the development and implementation of programs, policies, and services that contribute to a productive and inclusive working environment. We ensure the work we do aligns with our Operating Principles and strengthens the environment we’re building at Ashby. Our approach is to do things differently, we prioritize what truly fits our team and enhances how we work together. By embracing creativity and customization, we aim to create a people-first culture that drives both individual and organizational success. We’re building a team focused on helping Ashby scale thoughtfully while continuing to raise the bar for how we support and invest in our employees.We review all applications, and there isn’t a benefit to applying quickly. Take your time, look at the ap\n Apply now and work remotely at Ashby",
-    "is_new": true,
-    "category": "Other"
   }
 }
