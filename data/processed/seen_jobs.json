@@ -1,4 +1,21 @@
 {
+  "https://remoteok.com/remote-jobs/remote-software-engineer-prenosis-1137427": {
+    "title": "Software Engineer",
+    "company": "Prenosis",
+    "location": "🌏 Probably worldwide",
+    "tags": [
+      "golang",
+      "engineer"
+    ],
+    "salary": "80000-150000 USD",
+    "date_posted": "2026-09-23T14:00:02+00:00",
+    "link": "https://remoteok.com/remote-jobs/remote-software-engineer-prenosis-1137427",
+    "description": "Remote - Prenosis Inc. is an artificial intelligence company pioneering precision medicine in acute care. Our Immunix™ precision medicine platform drives the development of precision products and enables real-time delivery of optimal therapy. We've created and validated the fi...\n Apply now and work remotely at Prenosis",
+    "is_new": true,
+    "category": "Backend",
+    "extracted_skills": [],
+    "complete": true
+  },
   "https://remoteok.com/remote-jobs/remote-software-developer-security-analytics-redmimicry-1137417": {
     "title": "Software Developer Security Analytics",
     "company": "RedMimicry",
@@ -1549,28 +1566,6 @@
     "description": "<p><strong>Harvey Nash USA</strong> has been engaged to find a talented <strong>HR Operations Specialist</strong> for a leading healthcare organization committed to delivering exceptional employee experiences through operational excellence.</p><p><br></p><p><strong>Job Title: </strong>HR Operations Specialist</p><p><strong>Location: </strong>Remote (California Residents Only)</p><p><strong>Duration: </strong>6-Month Contract</p><p><br></p><p><strong>About the Role</strong></p><p>We are seeking a detail-oriented and customer-focused <strong>HR Operations Specialist</strong> to join a dynamic HR team. This role is responsible for supporting a wide range of HR operations and employee inquiries while ensuring timely, accurate, and high-quality service delivery. The ideal candidate is resourceful, takes ownership of their work, communicates effectively, and thrives in a fast-paced environment.</p><p><br></p><p><strong>Day-to-Day Responsibilities</strong></p><ul><li>Review HRIS transactional\n Apply now and work remotely at Harvey Nash",
     "is_new": false,
     "category": "Other"
-  },
-  "https://remoteok.com/remote-jobs/remote-software-engineer-go-wakacje-pl-1135634": {
-    "title": "Software Engineer GO",
-    "company": "Wakacje.pl",
-    "location": "🌏 Probably worldwide",
-    "tags": [
-      "golang",
-      "travel",
-      "api",
-      "engineer",
-      "backend"
-    ],
-    "salary": "80000-150000 USD",
-    "date_posted": "2026-07-29T20:00:01+00:00",
-    "link": "https://remoteok.com/remote-jobs/remote-software-engineer-go-wakacje-pl-1135634",
-    "description": "Remote - Market-leading travel agency (part of an international holding) working with numerous tour operator partners  is looking for a Golang Developers to join our core backend engineering team. Our developers focus heavily on building robust API integrations between our inter...\n Apply now and work remotely at Wakacje.pl",
-    "is_new": false,
-    "category": "Backend",
-    "extracted_skills": [
-      "Golang"
-    ],
-    "complete": true
   },
   "https://remoteok.com/remote-jobs/remote-member-of-technical-staff-applied-ml-recsys-liquid-ai-1131627": {
     "title": "Member of Technical Staff Applied ML RecSys",
