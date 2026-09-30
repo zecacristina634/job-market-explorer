@@ -1,5 +1,27 @@
 [
   {
+    "title": "Software Engineer GO",
+    "company": "Wakacje.pl",
+    "location": "🌏 Probably worldwide",
+    "tags": [
+      "golang",
+      "travel",
+      "api",
+      "engineer",
+      "backend"
+    ],
+    "salary": "80000-160000 USD",
+    "date_posted": "2026-07-29T20:00:01+00:00",
+    "link": "https://remoteok.com/remote-jobs/remote-software-engineer-go-wakacje-pl-1135634",
+    "description": "Remote - Market-leading travel agency (part of an international holding) working with numerous tour operator partners  is looking for a Golang Developers to join our core backend engineering team. Our developers focus heavily on building robust API integrations between our inter...\n Apply now and work remotely at Wakacje.pl",
+    "is_new": true,
+    "category": "Backend",
+    "extracted_skills": [
+      "Golang"
+    ],
+    "complete": true
+  },
+  {
     "title": "Software Engineer",
     "company": "Prenosis",
     "location": "🌏 Probably worldwide",
@@ -249,37 +271,6 @@
     "complete": true
   },
   {
-    "title": "Engineering Manager TLM Platform",
-    "company": "Harper",
-    "location": "🇺🇸 United States",
-    "tags": [
-      "executive",
-      "design",
-      "sys admin",
-      "docker",
-      "technical",
-      "customer support",
-      "marketing",
-      "video",
-      "finance",
-      "cloud",
-      "medical",
-      "engineer"
-    ],
-    "salary": "80000-150000 USD",
-    "date_posted": "2026-09-11T00:00:35+00:00",
-    "link": "https://remoteok.com/remote-jobs/remote-engineering-manager-tlm-platform-harper-1137380",
-    "description": "The Problem36 million businesses in America need insurance—it's not optional. 77% are underinsured. 40% have no coverage at all. The distribution system failed them: too slow, too opaque, too confusing.Over 90% of commercial insurance is still human-led. We're building the inverse: 90%+ AI-led, pushing toward the higher 90s. Not by patching legacy workflows—by building AI that makes humans more effective, improves the customer experience, and eliminates friction at every step.We're adding ~1,000 customers per month. We've grown 100x since last year. We're looking to do even more this year—and that's why we're hiring.You'll build the team and the systems the rest of engineering depends on. When they compound, everyone gets faster.The ThesisHarper runs 200+ services across Railway and AWS. We orchestrate N parallel agentic workloads. Our AI systems make thousands of decisions a day, and every decision needs to be traceable, evaluated, and cheaper to run tomorrow than it is today. T\n Apply now and work remotely at Harper",
-    "is_new": false,
-    "category": "DevOps / Infrastructure",
-    "extracted_skills": [
-      "Railway",
-      "AWS",
-      "AI"
-    ],
-    "complete": true
-  },
-  {
     "title": "DESARROLLADOR FULL STACK",
     "company": "Kruger NearShore LLC - Rekluti",
     "location": "🌏 Probably worldwide",
@@ -477,33 +468,6 @@
     "description": "Looking to start or restart your career in Software Quality Assurance?Ace IT Careers is reviewing candidates for QA Tester and QA Analyst opportunities with employers and staffing partners across the United States.This opportunity may be suitable for r...\n Apply now and work remotely at Ace IT Careers",
     "is_new": false,
     "category": "QA / Testing",
-    "extracted_skills": [],
-    "complete": true
-  },
-  {
-    "title": "Engineering Manager Thailand",
-    "company": "Bjak",
-    "location": "🇹🇭 Thailand",
-    "tags": [
-      "executive",
-      "design",
-      "sys admin",
-      "front end",
-      "infosec",
-      "technical",
-      "testing",
-      "finance",
-      "cloud",
-      "mobile",
-      "engineer",
-      "backend"
-    ],
-    "salary": "80000-150000 USD",
-    "date_posted": "2026-08-14T08:00:04+00:00",
-    "link": "https://remoteok.com/remote-jobs/remote-engineering-manager-thailand-bjak-1136670",
-    "description": "About KIRAOur mission is to make money smart, reliable and within reach for everyone.In 2019, we built the first mobile-first, insurance platform, enabling insurance to be accessible online by millions in the region. Today, it's the leading insurance platform in Southeast Asia.Today, we are expanding ways to help people in Asia and it includes spending, saving, investing, exchanging, travelling, and more. Our objective is to build tools that will help people get more from their money and at ease and self reliance, become an expert. We believe AI will help us achieve this in our generation.We are looking for the most talented and driven people we can find. We are looking for people who work for their passion, not counting hours. Who loves building great next-generation products, not status quo. Who cares about redefining how everyone around us can get the best financial applications, not for an exclusive few.We have teams working around the world, with over 20 nationalities and growing \n Apply now and work remotely at Bjak",
-    "is_new": false,
-    "category": "Product / Project Management",
     "extracted_skills": [],
     "complete": true
   },
