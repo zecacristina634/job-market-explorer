@@ -1,5 +1,49 @@
 [
   {
+    "title": "Graphic Designer",
+    "company": "Miranda Creative, Inc.",
+    "location": "🇬🇧 United Kingdom",
+    "tags": [
+      "design",
+      "music",
+      "technical",
+      "travel",
+      "speech",
+      "video",
+      "executive",
+      "content writing",
+      "medical",
+      "engineer",
+      "sys admin",
+      "consulting",
+      "testing",
+      "virtual assistant",
+      "finance",
+      "senior",
+      "ops",
+      "customer support",
+      "microsoft",
+      "excel",
+      "legal",
+      "designer",
+      "web developer",
+      "cloud",
+      "marketing",
+      "photoshop",
+      "illustrator",
+      "full time",
+      "part time"
+    ],
+    "salary": "80000-160000 USD",
+    "date_posted": "2026-07-29T01:36:08+00:00",
+    "link": "https://remoteok.com/remote-jobs/remote-graphic-designer-miranda-creative-inc-1135610",
+    "description": "We are looking for a talented and detail-oriented Graphic Designer to join our creative team part-time (25 hours per week), with the potential to grow into a full-time opportunity.<br><br>Since 1988, Miranda Creative has partnered with more than 6,000 clients across finance, hospitality, healthcare, manufacturing, tourism, and government. We're a full-service, award-winning, New England-based creative and strategic agency. We pride ourselves on being a highly inclusive, collaborative community built on creativity, trust, and joy. We welcome you to Miranda Creative and look forward to learning more about you.<br><br>This role is ideal for a designer who enjoys bringing brands to life through thoughtful design, understands the importance of consistency, and has experience creating both static and motion-based content. The primary focus of this position will be supporting production needs, ensuring brand standards are implemented accurately, and helping deliver high-quality creative work \n Apply now and work remotely at Miranda Creative, Inc.",
+    "is_new": true,
+    "category": "Design",
+    "extracted_skills": [],
+    "complete": true
+  },
+  {
     "title": "Software Engineer",
     "company": "Prenosis",
     "location": "🌏 Probably worldwide",
@@ -93,24 +137,6 @@
     "extracted_skills": [
       "C++"
     ],
-    "complete": true
-  },
-  {
-    "title": "Backend Software Engineer",
-    "company": "Airspace Link",
-    "location": "🌏 Probably worldwide",
-    "tags": [
-      "golang",
-      "engineer",
-      "backend"
-    ],
-    "salary": "80000-150000 USD",
-    "date_posted": "2026-09-19T20:00:01+00:00",
-    "link": "https://remoteok.com/remote-jobs/remote-backend-software-engineer-airspace-link-1137409",
-    "description": "Remote - Throughout history, transformative advancements in infrastructure have propelled humanity forward—from Vanderbilt’s railroads to Edison’s electrical grid and Eisenhower’s highways. Today, we stand at another pivotal infrastructure moment with Airspace Link’s d...\n Apply now and work remotely at Airspace Link",
-    "is_new": false,
-    "category": "Backend",
-    "extracted_skills": [],
     "complete": true
   },
   {
