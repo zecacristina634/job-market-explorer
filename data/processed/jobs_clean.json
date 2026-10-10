@@ -1,5 +1,71 @@
 [
   {
+    "title": "Manager Clinical Data Management",
+    "company": "EDETEK",
+    "location": "🌏 Probably worldwide",
+    "tags": [
+      "executive",
+      "design",
+      "sys admin",
+      "edu",
+      "customer support",
+      "testing",
+      "travel",
+      "junior",
+      "ops",
+      "medical",
+      "recruiter"
+    ],
+    "salary": "80000-161000 USD",
+    "date_posted": "2026-10-10T08:00:08+00:00",
+    "link": "https://remoteok.com/remote-jobs/remote-manager-clinical-data-management-edetek-1137481",
+    "description": "\nManager, Clinical Data Management leads clinical data management team to handle project management documentation, preform clinical data management activities and system implementations for EDETEK’s CONFORM eClinical, write design specifications for the system (forms, reports, etc.), and facilitate testing of system implementations. In addition to stay hands-on with clinical data management operations and activities, Manager of Clinical Data Management oversees data management projects to ensure quality, timely delivery and ongoing client satisfaction; identifies client needs and develops creative solutions for projects, leveraging expertise, operational capabilities and technologies; communicates with clients and internal teams.\nThe Manager, Clinical Data Management should thoroughly understand the requirements for Good Clinical Data Management services, including its documentation; be involved in start-up or wrap-up of in-house and client-specific data management projects; have a\n Apply now and work remotely at EDETEK",
+    "is_new": true,
+    "category": "Data / AI",
+    "extracted_skills": [
+      "CONFORM eClinical"
+    ],
+    "complete": true
+  },
+  {
+    "title": "Product Engineering Lead",
+    "company": "Tether Operations Limited",
+    "location": "🌏 Probably worldwide",
+    "tags": [
+      "design",
+      "bitcoin",
+      "react",
+      "executive",
+      "technical",
+      "recruiter",
+      "marketing",
+      "virtual assistant",
+      "javascript",
+      "finance",
+      "edu",
+      "cloud",
+      "api",
+      "mobile",
+      "ops",
+      "sys admin",
+      "engineer"
+    ],
+    "salary": "80000-161000 USD",
+    "date_posted": "2026-10-10T00:00:05+00:00",
+    "link": "https://remoteok.com/remote-jobs/remote-product-engineering-lead-tether-operations-limited-1137478",
+    "description": "\nJoin Tether and Shape the Future of Digital Finance\nAt Tether, we’re not just building products, we’re pioneering a global financial revolution. Our cutting-edge solutions empower businesses—from exchanges and wallets to payment processors and ATMs—to seamlessly integrate reserve-backed tokens across blockchains. By harnessing the power of blockchain technology, Tether enables you to store, send, and receive digital tokens instantly, securely, and globally, all at a fraction of the cost. Transparency is the bedrock of everything we do, ensuring trust in every transaction.\nInnovate with Tether\nTether Finance: Our innovative product suite features the world’s most trusted stablecoin, USDT, relied upon by hundreds of millions worldwide, alongside pioneering digital asset tokenization services.\nBut that’s just the beginning:\nTether Power: Driving sustainable growth, our energy solutions optimize excess power for Bitcoin mining using eco-friendly practices in state-of-the\n Apply now and work remotely at Tether Operations Limited",
+    "is_new": true,
+    "category": "Full-Stack",
+    "extracted_skills": [
+      "Blockchain",
+      "USDT",
+      "Stablecoin",
+      "Bitcoin mining",
+      "Tokenization"
+    ],
+    "complete": true
+  },
+  {
     "title": "Product Design Lead",
     "company": "Fuel50",
     "location": "🌏 Probably worldwide",
@@ -24,7 +90,7 @@
     "date_posted": "2026-10-09T08:00:04+00:00",
     "link": "https://remoteok.com/remote-jobs/remote-product-design-lead-fuel50-1137474",
     "description": "\nFuel50 is a workforce transformation platform helping organisations understand workforce capability, build skills and enable internal mobility in an AI-driven world. Our products combine skills intelligence, talent marketplace experiences and responsible AI to help people and organisations take their next step. \nWe are looking for a Product Design Lead to shape the next chapter of our product experience and design organisation. \nThis is a senior player-coach role. You will lead and develop our product design team while staying close to the work, setting direction, shaping product strategy, prototyping ideas and helping teams ship high-quality experiences. \nYou will work closely with Product and Engineering as a leadership trio, influencing decisions across the organisation and helping Fuel50 build products that are simple, trusted and valuable. \nIf you’re a strategic design leader who still loves getting close to the work, developing people and shipping real product, we’d\n Apply now and work remotely at Fuel50",
-    "is_new": true,
+    "is_new": false,
     "category": "Design",
     "extracted_skills": [],
     "complete": true
