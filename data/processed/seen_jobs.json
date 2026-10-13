@@ -1,4 +1,47 @@
 {
+  "https://remoteok.com/remote-jobs/remote-principal-software-engineer-vytalize-health-1137508": {
+    "title": "Principal Software Engineer",
+    "company": "Vytalize Health",
+    "location": "🇺🇸 United States",
+    "tags": [
+      "design",
+      "infosec",
+      "python",
+      "docker",
+      "technical",
+      "recruiter",
+      "customer support",
+      "testing",
+      "marketing",
+      "quality assurance",
+      "finance",
+      "java",
+      "c",
+      "cloud",
+      "api",
+      "executive",
+      "content writing",
+      "senior",
+      "ops",
+      "stats",
+      "sys admin",
+      "golang",
+      "medical",
+      "engineer",
+      "backend"
+    ],
+    "salary": "80000-161000 USD",
+    "date_posted": "2026-10-13T00:00:18+00:00",
+    "link": "https://remoteok.com/remote-jobs/remote-principal-software-engineer-vytalize-health-1137508",
+    "description": "Your OpportunityAs a Principal Engineer, you will help design, build, and operate the clinical decision support and API-driven data delivery platform that enables Vytalize Health to embed timely, actionable clinical insights directly into provider workflows. Working cross-functionally with Data Engineering, Product, Clinical Operations, and EMR partners, your solutions will transform how clinicians access data—moving from external tools and workarounds to seamless, in-workflow decision support via CDS Hooks and real-time APIs. \n \nYou will own the technical foundation for Clinical Decision Support (CDS) Hooks, REST APIs, and the architectural patterns that ensure clinical data is accessible, trustworthy, and performant at the moment of care. This role sits at the intersection of healthcare interoperability standards, modern API design, and operational excellence. You will establish reliability metrics and SLAs that ensure CDS Hooks and APIs serve clinician workflows with consistent \n Apply now and work remotely at Vytalize Health",
+    "is_new": true,
+    "category": "Backend",
+    "extracted_skills": [
+      "CDS Hooks",
+      "REST APIs"
+    ],
+    "complete": true
+  },
   "https://remoteok.com/remote-jobs/remote-manager-clinical-data-management-edetek-1137481": {
     "title": "Manager Clinical Data Management",
     "company": "EDETEK",
@@ -109,25 +152,6 @@
     "description": "Remote - Prenosis Inc. is an artificial intelligence company pioneering precision medicine in acute care. Our Immunix™ precision medicine platform drives the development of precision products and enables real-time delivery of optimal therapy. We've created and validated the fi...\n Apply now and work remotely at Prenosis",
     "is_new": false,
     "category": "Backend",
-    "extracted_skills": [],
-    "complete": true
-  },
-  "https://remoteok.com/remote-jobs/remote-software-developer-security-analytics-redmimicry-1137417": {
-    "title": "Software Developer Security Analytics",
-    "company": "RedMimicry",
-    "location": "🌏 Probably worldwide",
-    "tags": [
-      "golang",
-      "infosec",
-      "stats",
-      "full time"
-    ],
-    "salary": "80000-150000 USD",
-    "date_posted": "2026-09-22T09:00:01+00:00",
-    "link": "https://remoteok.com/remote-jobs/remote-software-developer-security-analytics-redmimicry-1137417",
-    "description": "Remote - Location: Mostly remote (within Germany), with monthly in-person collaboration at our Berlin officeHours: Full-time, 40 hours per weekContract: Fixed-termSalary: EUR 69,000 – 77,000We are building a new capability that turns fragmented, noisy security logs...\n Apply now and work remotely at RedMimicry",
-    "is_new": false,
-    "category": "Data / AI",
     "extracted_skills": [],
     "complete": true
   },
